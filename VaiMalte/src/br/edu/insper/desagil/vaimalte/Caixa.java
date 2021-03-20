@@ -31,18 +31,12 @@ public class Caixa {
 			int quantidade = pedidoNaLista.getQuantidade();
 			Produto produtoNaLista = pedidoNaLista.getProduto();
 			
-			//agora temos que descobrir o codigo do produto e o preço
-			
 			double precoProdutoNaLista = produtoNaLista.getPreco();
 			int codigoProdutoNaLista = produtoNaLista.getCodigo();
-			
-			//return codigoProdutoNaLista;
 			
 			//verifica se o produto tem algum tipo de desconto
 			if (this.caixa.containsKey(codigoProdutoNaLista)) {
 				
-				
-				//O problema do codigo está exatamente aqui, está dando 0
 				double desconto = (this.caixa.get(codigoProdutoNaLista))*(0.01);
 				total += (precoProdutoNaLista*(1-desconto))*quantidade;
 				
@@ -54,7 +48,6 @@ public class Caixa {
 			
 		}
 		
-		//return codigoProdutoNaLista;
 		return total;
 	}
 

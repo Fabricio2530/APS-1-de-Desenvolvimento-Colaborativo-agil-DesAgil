@@ -65,7 +65,6 @@ public class Testador {
 		carrinhoD.verificaProduto(pedidoEinsenbanh);
 		carrinhoD.verificaProduto(pedidoEinsenbanh);
 		
-		//A cerveja é muito ruim, por isso está com queima de estoque.
 		caixaD.adicionaNoCaixa(packCerveja, 50);
 		
 		double total = caixaD.totalComDescontos(carrinhoD.getCarrinho());

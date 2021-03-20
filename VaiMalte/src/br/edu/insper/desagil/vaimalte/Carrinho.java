@@ -16,7 +16,6 @@ public class Carrinho {
 	}
 	
 	public void verificaProduto(Pedido pedido) {
-		//é void porque não retorna nada
 		if (this.carrinho.contains(pedido)){
 			
 			pedido.incrementaQuantidade();
