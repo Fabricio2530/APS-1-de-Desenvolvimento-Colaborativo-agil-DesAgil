@@ -9,4 +9,4 @@ Desenvolver um serviço de ecommerce para cervejeiros a partir de classes. O nom
 - [x] Implementar a classe Pedido
 - [x] Implementar a classe Carrinho
 - [x] Implementar a classe Caixa
-- [ ] Implementar os testes e verificar 
+- [x] Implementar os testes e verificar 
