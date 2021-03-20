@@ -5,7 +5,7 @@ public class Pedido {
 	private int quantidade;
 	
 	
-	public Pedido(Produto produto, int quantidade) {
+	public Pedido(Produto produto) {
 		super();
 		this.produto = produto;
 		//a quantidade deve ser inicializada já com 1
@@ -14,11 +14,11 @@ public class Pedido {
 
 
 	public Produto getProduto() {
-		return produto;
+		return this.produto;
 	}
 
 	public int getQuantidade() {
-		return quantidade;
+		return this.quantidade;
 	}
 
 	public void incrementaQuantidade() {

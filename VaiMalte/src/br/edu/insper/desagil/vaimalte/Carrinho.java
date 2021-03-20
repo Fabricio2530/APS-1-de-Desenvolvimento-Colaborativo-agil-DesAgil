@@ -24,9 +24,9 @@ public class Carrinho {
 		} else {
 			
 			//como se não houver esse pedido, ele precisa criar, vamos criar com base no pedido de referencia
-			Pedido novo_pedido = new Pedido(pedido.getProduto(), pedido.getQuantidade());
+			Pedido novoPedido = new Pedido(pedido.getProduto());
 
-			this.carrinho.add(novo_pedido);
+			this.carrinho.add(novoPedido);
 		}
 		
 	}

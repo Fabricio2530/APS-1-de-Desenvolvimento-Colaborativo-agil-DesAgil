@@ -12,7 +12,7 @@ public class Caixa {
 		this.caixa = new HashMap<>();
 	}
 	
-	public void adicionaNoCaixa(Produto produto, Integer inteiro) {
+	public void adicionaNoCaixa(Produto produto, int inteiro) {
 		
 		if (1 <= inteiro && inteiro <= 99) {
 			this.caixa.put(produto.getCodigo(), inteiro);
@@ -25,32 +25,36 @@ public class Caixa {
 		//vamos percorrer a lista e verificar cada pedido
 		for(int i = 0; i < carrinho.size(); i++) {
 			//pegando o pedido presente na lista
-			Pedido pedido_na_lista = carrinho.get(i);
+			Pedido pedidoNaLista = carrinho.get(i);
 			
 			//pegando a quantidade do pedido e o produto
-			int quantidade = pedido_na_lista.getQuantidade();
-			Produto produto_na_lista = pedido_na_lista.getProduto();
+			int quantidade = pedidoNaLista.getQuantidade();
+			Produto produtoNaLista = pedidoNaLista.getProduto();
 			
 			//agora temos que descobrir o codigo do produto e o preço
 			
-			double preco_produto_na_lista = produto_na_lista.getPreco();
-			int codigo_produto_na_lista = produto_na_lista.getCodigo();
+			double precoProdutoNaLista = produtoNaLista.getPreco();
+			int codigoProdutoNaLista = produtoNaLista.getCodigo();
+			
+			//return codigoProdutoNaLista;
 			
 			//verifica se o produto tem algum tipo de desconto
-			if (caixa.containsKey(codigo_produto_na_lista)) {
+			if (this.caixa.containsKey(codigoProdutoNaLista)) {
 				
-				double desconto = (caixa.get(codigo_produto_na_lista))/100;
 				
-				total += (preco_produto_na_lista*(1-desconto))*quantidade;
+				//O problema do codigo está exatamente aqui, está dando 0
+				double desconto = (this.caixa.get(codigoProdutoNaLista))*(0.01);
+				total += (precoProdutoNaLista*(1-desconto))*quantidade;
 				
 			} else {
 				
-				total += preco_produto_na_lista*quantidade;
+				total += precoProdutoNaLista*quantidade;
 				
 			}
 			
 		}
 		
+		//return codigoProdutoNaLista;
 		return total;
 	}
 

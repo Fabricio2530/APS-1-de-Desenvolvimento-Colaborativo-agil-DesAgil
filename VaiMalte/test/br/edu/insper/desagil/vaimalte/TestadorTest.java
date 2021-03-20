@@ -7,11 +7,6 @@ import org.junit.jupiter.api.Test;
 
 class TestadorTest {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-	
 	private Testador t;
 
 	@BeforeEach
@@ -24,6 +19,7 @@ class TestadorTest {
 	    assertTrue(t.testeA());
 	}
 
+	
 	@Test
 	public void testeB() {
 	    assertTrue(t.testeB());
